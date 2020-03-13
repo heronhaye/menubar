@@ -217,6 +217,7 @@ export class Menubar extends EventEmitter {
     if (!this.tray) {
       throw new Error('Tray has been initialized above');
     }
+    this.tray.setContextMenu(null);
     this.tray.on(
       defaultClickEvent as Parameters<Tray['on']>[0],
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
